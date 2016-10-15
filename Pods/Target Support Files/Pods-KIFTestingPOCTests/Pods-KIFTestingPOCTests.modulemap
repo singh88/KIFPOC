@@ -1,0 +1,6 @@
+framework module Pods_KIFTestingPOCTests {
+  umbrella header "Pods-KIFTestingPOCTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
