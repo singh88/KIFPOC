@@ -9,12 +9,12 @@ target 'Your Apps' do
   ...
 end
 
-target 'Acceptance Tests' do      ----- Acceptance Tests is the name of your unit test target
+target 'Acceptance Tests' do      ----- Acceptance Tests is the name of your unit test target(or whatever name you prefer)
   pod 'KIF', '~> 3.0', :configurations => ['Debug']
 end
 2)run pod install,now close your current xcode project and open .xcworkspace file from project dir.
 3)Select your unit test target and add Objective-C File add that file and then Xcode will prompt for bridging header file.Add that file and then now you are free to delete your Objective-C file(its a hack to create bridging header)
-4)Add KIF+SwiftExtension.swift file in the unit test target(for KIF) and following code
+4)Add KIF+SwiftExtension.swift file in the unit test target(for KIF) and add following code
 
 import XCTest
 import KIF
@@ -39,6 +39,6 @@ extension KIFTestActor {
     }
 }
 
-6)Now you are all set to write to write your firs test script
+6)Now you are all set to write to write your first test script for the KIF test target.
 
 Rest you can take a look at my small POC.
